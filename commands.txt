@@ -1,0 +1,2 @@
+php -c "E:\php\php.ini" -S localhost:8000 (to run the server)
+http://localhost:8000/login.html

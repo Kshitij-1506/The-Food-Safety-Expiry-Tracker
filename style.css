@@ -1,0 +1,162 @@
+/* Full style.css - unified theme */
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",sans-serif}
+body{background:#f6f8f7;color:#333;line-height:1.45}
+header{background:linear-gradient(135deg,#009688,#00796b);color:#fff;padding:18px 28px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 8px rgba(0,0,0,0.12)}
+header h1{font-size:20px;font-weight:600}
+nav{display:flex;gap:12px;align-items:center}
+nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px;font-weight:500;transition:all .18s}
+nav a:hover{background:rgba(255,255,255,0.06)}
+nav a.active{background:rgba(255,255,255,0.08);color:#ffe082}
+
+/* Container */
+.content{width:92%;max-width:1200px;margin:26px auto;background:#fff;padding:26px;border-radius:12px;box-shadow:0 6px 18px rgba(12,12,12,0.06)}
+.content h2{font-size:20px;margin-bottom:14px;color:#0d3b36}
+.content h3{margin-top:20px}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin-top:12px;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.03)}
+thead th{background:#00796b;color:#fff;padding:12px 14px;text-align:left;font-weight:600;font-size:14px}
+tbody td{padding:10px 12px;border-bottom:1px solid #eef3f2;font-size:14px}
+tbody tr:hover td{background:#f7fffb}
+
+/* Buttons */
+button,.btn{background:#00796b;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;transition:.14s;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{background:#009688;transform:translateY(-2px)}
+button.delete{background:#e53935}
+button.delete:hover{background:#c62828}
+
+/* Forms */
+.form-container{width:100%;max-width:760px;margin:28px auto;background:#fff;padding:22px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06)}
+label{display:block;margin-top:12px;margin-bottom:6px;font-weight:600;color:#264b44}
+input,select,textarea{width:100%;padding:10px;border:1px solid #dfece9;border-radius:8px;font-size:14px}
+input:focus,select:focus,textarea:focus{border-color:#00796b;outline:none;box-shadow:0 0 8px rgba(0,121,107,0.12)}
+
+/* Login / Register card */
+.auth-container{display:flex;justify-content:center;align-items:center;height:100vh;background:#f6faf7}
+.auth-card{background:#fff;padding:40px 45px;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,0.08);width:360px;text-align:center;animation:fadeIn .4s}
+.auth-card h2{color:#006b4f;margin-bottom:20px;font-size:1.6rem}
+.auth-card label{display:block;text-align:left;margin:8px 0;color:#333;font-weight:500}
+.auth-card a{color:#006b4f;text-decoration:none;display:inline-block;margin-top:10px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+
+/* Dashboard */
+.dashboard-overview{display:flex;flex-direction:column;align-items:center;margin-top:20px}
+.dashboard-cards{display:flex;justify-content:center;gap:24px;margin-bottom:18px;flex-wrap:wrap}
+.dashboard-card{background:#e5f4e9;padding:12px 24px;border-radius:10px;font-weight:700;color:#004d3a;box-shadow:0 3px 6px rgba(0,0,0,0.08)}
+.chart-wrapper{flex:0 0 340px;height:250px;display:flex;align-items:center;justify-content:center}
+#inspectionChart{display:block;max-width:340px;max-height:250px;width:100%;height:100%}
+
+/* Filter bar */
+.filter-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.filter-bar input,.filter-bar select{padding:8px 12px;border-radius:8px;border:1px solid #dfece9;font-size:13px}
+
+/* Row highlighting */
+tr.status-valid td{background:#e8f5e9;color:#1b5e20}
+tr.status-expiring td{background:#fff9c4;color:#f57f17}
+tr.status-expired td{background:#ffebee;color:#c62828}
+tr.status-valid:hover td,tr.status-expiring:hover td,tr.status-expired:hover td{filter:brightness(.96)}
+
+/* Responsive */
+@media(max-width:880px){.dashboard-top{flex-direction:column}.chart-wrapper{width:100%;flex:1 1 auto;height:220px}.stats-container{justify-content:space-between;gap:10px}}
+
+/* === Unified table style (same as dashboard) === */
+.table-standard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.table-standard thead th {
+  background: #00796b;
+  color: #fff;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table-standard tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef3f2;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.table-standard tbody tr:hover td {
+  background-color: #f7fffb;
+}
+
+/* Action buttons (match dashboard) */
+.action-btn {
+  background-color: #00796b;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+  cursor:pointer;
+}
+
+.action-btn:hover { background-color: #009688; transform: translateY(-1px); }
+
+.action-delete {
+  background-color: #e53935;
+}
+
+.action-delete:hover { background-color: #c62828; transform: translateY(-1px); }
+
+.table-standard td {
+  word-wrap: break-word;
+  max-width: 250px;
+}
+
+
+/* small inline form */
+.inline-form { display:inline-block; margin:0; padding:0; }
+.inline-select { padding:6px 8px; border-radius:6px; border:1px solid #dfece9; font-size:13px; }
+.inline-submit { padding:6px 8px; border-radius:6px; border:none; background:#00796b; color:#fff; cursor:pointer; font-weight:600; }
+.inline-submit:hover { background:#009688; }
+
+/* === Confirmation Modal === */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: popIn 0.2s ease-in-out;
+}
+
+.modal-box h3 {
+  margin-bottom: 10px;
+  color: #00796b;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

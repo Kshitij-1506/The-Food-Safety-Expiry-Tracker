@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Register - Food Safety Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Register</h2>
+      <form action="register_user.php" method="POST">
+        <label>Username</label>
+        <input type="text" name="username" required>
+        <label>Password</label>
+        <input type="password" name="password" required>
+        <label>Role</label>
+        <select name="role">
+          <option value="Inspector">Inspector</option>
+          <option value="Admin">Admin</option>
+          <option value="Developer">Developer</option>
+          <option value="Viewer">Viewer</option>
+        </select>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <a href="login.html">Already have an account? Login</a>
+    </div>
+  </div>
+</body>
+</html>
